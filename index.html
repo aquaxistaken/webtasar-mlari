@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="language-selector">
+            <button id="trBtn" class="lang-button active">Türkçe</button>
+            <button id="enBtn" class="lang-button">English</button>
+        </div>
+        <h1>To-Do List</h1>
+    </header>
+    <main>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Add new task...">
+            <button id="addButton">Add</button>
+        </div>
+        <div class="container">
+            <ul id="taskList">
+            </ul>
+        </div>
+    </main>
+    <div id="particles-js"></div>
+
+    <script src="particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 150, density: { enable: true, value_area: 800 } },
+                color: { value: '#f40000' },
+                shape: { type: 'circle', stroke: { width: 0, color: '#f40000' }, polygon: { nb_sides: 5 }, image: { src: 'img/github.svg', width: 100, height: 100 } },
+                opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: false, speed: 30, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: '#4682b4', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 5, direction: 'none', random: false, straight: false, out_mode: 'bounce', attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: false, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { grab: { distance: 200, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity_bubble: 0.8, speed: 3 }, repulse: { distance: 200 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            },
+            retina_detect: true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
